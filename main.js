@@ -1,51 +1,5 @@
 import './style.css'
 
-document.querySelector('#app').innerHTML = `
-<nav class="navbar">
-  <h1 class="app_name">
-    <span>
-      <img src="./public/assets/sensei's-board.png" alt="App Logo" class="logo"/>
-    </span>
-    Sensei's Board
-  </h1>
-</nav>
-<div class="board-container">
-  <div class="myCanvas_container">
-    <canvas id="myCanvas" width="800" height="600">
-      Sorry, your browser does not support canvas.
-    </canvas>
-  </div>
-  <div class="canvas_controls">
-    <h2>Controls</h2>
-    <div class="fonts">
-      <label>Fonts: </label>
-      <select id="font_dropdown">
-        <option value="select current font" disabled selected>Select current font</option>
-        <option value="Italic">Italic</option>
-        <option value="Helvetica">Helvetica</option>
-        <option value="Poppins">Poppins</option>
-        <option value="Roboto">Roboto</option>
-        <option value="Arial">Arial</option>
-      </select>
-    </div>
-    <div class="sizes">
-      <label>Font size: </label>
-      <input type="number" id="font_size" min="10" max="100" value="50"/>
-    </div>
-    <div class="text">
-      <label>Add Text:</label>
-      <input type="text" id="text_input"/>
-      <button id="add_text_btn">Add Text</button>
-      <p id="error_message" style="display:none;">Font size exceeds the limit of 100.</p>
-    </div>
-    <div class="controls">
-      <button id="undo_btn">Undo</button>
-      <button id="redo_btn">Redo</button>
-    </div>
-  </div>
-</div>
-`
-
 const canvas = document.getElementById("myCanvas");
 const ctx = canvas.getContext("2d");
 
